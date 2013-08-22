@@ -182,5 +182,4 @@ arv_buffer_class_init (ArvBufferClass *node_class)
 	object_class->finalize = arv_buffer_finalize;
 }
 
-
 G_DEFINE_TYPE (ArvBuffer, arv_buffer, G_TYPE_OBJECT)
