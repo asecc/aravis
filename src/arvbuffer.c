@@ -118,6 +118,21 @@ arv_buffer_new_allocate (size_t size)
 }
 
 /**
+ * arv_buffer_data address:
+ * @buffer: a #ArvBuffer
+ *
+ * Returns: casted pointer to data 
+ *
+ * Since: 0.2.3-sightmachine
+ */
+guint64  
+arv_buffer_data_address (ArvBuffer *buffer)
+{
+        return (guint64) buffer->data;
+}
+
+
+/**
  * arv_buffer_clear:
  * @buffer: a #ArvBuffer
  *
@@ -166,5 +181,6 @@ arv_buffer_class_init (ArvBufferClass *node_class)
 
 	object_class->finalize = arv_buffer_finalize;
 }
+
 
 G_DEFINE_TYPE (ArvBuffer, arv_buffer, G_TYPE_OBJECT)

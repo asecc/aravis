@@ -23,6 +23,7 @@
 #ifndef ARV_BUFFER_H
 #define ARV_BUFFER_H
 
+#include <string.h>
 #include <arvtypes.h>
 
 G_BEGIN_DECLS
@@ -92,6 +93,7 @@ GType arv_buffer_get_type (void);
 
 ArvBuffer *	arv_buffer_new_allocate	(size_t size);
 ArvBuffer *	arv_buffer_new 		(size_t size, void *preallocated);
+guint64		arv_buffer_data_address (ArvBuffer *buffer);
 ArvBuffer * 	arv_buffer_new_full	(size_t size, void *preallocated,
 					 void *user_data, GDestroyNotify user_data_destroy_func);
 
